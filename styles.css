@@ -86,3 +86,6 @@
     font-size: .6em;
   }
   
+header {
+    background: url('img/bg1.jpg') 0 0 / cover;
+}
