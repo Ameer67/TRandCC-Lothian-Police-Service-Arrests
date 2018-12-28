@@ -54,13 +54,6 @@
 
 
 
-html {
-    font-family: 'Abel', sans-serif;
-    color: white;
-    background: linear-gradient(black, #0f567d) no-repeat;
-    min-height: 100%;
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     text-transform: uppercase;
@@ -91,7 +84,20 @@ h6 {
     font-size: .6em;
 }
 
+a {
+    color: yellow;
+}
+
+html {
+    font-family: 'Abel', sans-serif;
+    color: white;
+    background: linear-gradient(black, #0f567d) no-repeat;
+    min-height: 100%;
+}
+
 /* HEADER */
 header {
+    display: grid;
+    grid: 1fr / 1fr 1fr;
     background: url('img/bg1.jpg') 60% 40% / cover;
 } 
