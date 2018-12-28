@@ -57,7 +57,6 @@
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     text-transform: uppercase;
-    font-style: italic;
 }
 
 h1 {
@@ -89,6 +88,7 @@ a {
 }
 
 html {
+    font-size: 20px;
     font-family: 'Abel', sans-serif;
     color: white;
     background: linear-gradient(black, #0f567d) no-repeat;
@@ -98,6 +98,17 @@ html {
 /* HEADER */
 header {
     display: grid;
-    grid: 1fr / 1fr 1fr;
-    background: url('img/bg1.jpg') 60% 40% / cover;
+    grid: 2fr 1fr/ 1fr;
+    grid-column-gap: 1em;
+    justify-items: center;
+    padding: 1.5em;
+    background: url('img/bg1.jpg') 60% 20% / cover;
 } 
+
+header .logo {
+    max-width: 200px;
+}
+
+header .logo img {
+    max-width: 100%;
+}
