@@ -10,22 +10,25 @@
 <body>
     <div id="main-container">
         <header>
-            <div class="logo">
+            <!-- <div class="logo">
                 <img src="img/LothianPolice.png" alt="Lothian Police Service logo">
-            </div>
+            </div> -->
             <div class="current-user">
                 <form id="sign-in-form">
                     <h4>Welcome back,</h4>
                     <label for="first-name">
-                        <input type="text" name="first-name" id="first-name">
+                        <input type="text" name="first-name" id="first-name" value="First name">
                     </label>
+                    <label for="last-name">
+                            <input type="text" name="last-name" id="last-name" value="Last name">
+                        </label>
                 </form>
 
             </div>
         </header>
         <div id="main-content">
             <div class="arrest-count-container">
-                <h1>0 arrests made to date.</h1>
+                <h1><span class="arrest-count">0</span> arrests made to date.</h1>
             </div>
             <div class="new-arrest-container">
                 <form id="new-arrest-form">
