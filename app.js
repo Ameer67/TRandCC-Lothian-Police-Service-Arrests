@@ -1,10 +1,6 @@
 let arrestContainer = document.querySelector('.arrest-container');
 let arrestList = document.querySelector('.arrest-list');
-let suspect = document.querySelector('#name');
-let date = document.querySelector('#date');
-let year = document.querySelector('#year');
-let make = document.querySelector('#make');
-let model = document.querySelector('#model');
+let arrestCount = document.querySelector('.arrest-count');
 
 let arrestLog = [];
 
@@ -56,4 +52,5 @@ function arrestFunction(e){
     } else if (e.target.parentElement.className === 'delete-arrest') {
         console.log('delete arrest');
     }
+    arrestCount.innerText = arrestLog.length;
 }
