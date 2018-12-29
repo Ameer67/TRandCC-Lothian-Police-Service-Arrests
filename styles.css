@@ -217,6 +217,7 @@ header .logo img {
 }
 
 .delete-arrest {
+    align-self: center;
     opacity: .5;
     height: 20px;
 }

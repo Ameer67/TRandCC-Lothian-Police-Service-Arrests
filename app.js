@@ -1,7 +1,6 @@
 let arrestContainer = document.querySelector('.arrest-container');
 let arrestList = document.querySelector('.arrest-list');
 let arrestCount = document.querySelector('.arrest-count');
-
 let arrestLog = [];
 
 arrestContainer.addEventListener('click', arrestFunction);
@@ -11,43 +10,38 @@ function arrestFunction(e){
 
         let arrestForm = e.target.form;
         let allInputsFilled = true;
-        function addArrestRecord(date, suspect, year, make, model) { //creates new object
-            this.date = date;
-            this.suspect = suspect;
-            this.year = year;
-            this.make = make;
-            this.model = model;
-        }
         
         for (let i = 0; i < arrestForm.length - 1; i++){
             if (arrestForm[i].value === ''){ //check if any inputs are blank
                 allInputsFilled = false;
             } 
         }
+
         console.log(allInputsFilled);
-        if (allInputsFilled === true) {
-            arrestLog.push(
-                new addArrestRecord(arrestForm[0].value, arrestForm[1].value, arrestForm[2].value, arrestForm[3].value, arrestForm[4].value)
-            );
+
+        if (allInputsFilled === true) { // do the following if all inputs are filled
             let newRecord = document.createElement('li');
             newRecord.className = 'arrest';
             newRecord.innerHTML = `
                 <div class="arrest-info">
-                <div class="arrest-date"> ${arrestLog[arrestLog.length - 1].date}</div>
-                <div class="arrest-name"> ${arrestLog[arrestLog.length - 1].suspect} </div>
-                <div class="arrest-car"> ${arrestLog[arrestLog.length - 1].year} ${arrestLog[arrestLog.length - 1].make} ${arrestLog[arrestLog.length - 1].model}</div>
+                    <div class="arrest-date"> ${arrestForm[0].value}</div>
+                    <div class="arrest-name"> ${arrestForm[1].value} </div>
+                    <div class="arrest-car"> ${arrestForm[2].value} ${arrestForm[3].value} ${arrestForm[4].value}</div>
                 </div>
                 <a href="#" class="delete-arrest"><img src="img/x.png"></a>
             `;
+            arrestLog.push(newRecord); // add the new element to the array
+            document.querySelector('.no-results').style.display = 'none'; // hide 'no results'
             for (let i = 0; i < arrestForm.length - 1; i++){ // clear inputs
                 arrestForm[i].value = '';
             }
 
-            document.querySelector('.no-results').style.display = 'none';
-            arrestList.appendChild(newRecord);
+            for (let i = 0; i < arrestLog.length; i++){ // add new element as child of arrestList
+                arrestList.appendChild(arrestLog[i]);
+            }
         }
         
-        
+    ///////////////////////////////////////////////////////////////////////        
 
     } else if (e.target.parentElement.className === 'delete-arrest') {
         console.log('delete arrest');
