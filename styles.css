@@ -149,9 +149,13 @@ header .logo img {
     color: red;
 }
 
-/* NEW ARREST CONTAINER */
 
 /* ARREST CONTAINER */
+.arrest-container {
+    padding: .5em;
+    background: silver;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+}
 .arrest {
     display: grid;
     grid: 1fr / 1fr 20px;
