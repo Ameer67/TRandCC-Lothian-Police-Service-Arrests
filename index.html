@@ -18,12 +18,12 @@
                 <h4 class="welcome-back">Welcome back,</h4>
                 <form id="sign-in-form">
                     <label for="first-name">
-                        <input type="text" name="first-name" id="first-name" value="First name">
+                        <input type="text" name="first-name" id="first-name">
                     </label>
                     <label for="last-name">
-                        <input type="text" name="last-name" id="last-name" value="Last name">
+                        <input type="text" name="last-name" id="last-name">
                     </label>
-                        <input type="submit" value="Login">
+                    <button type="button" ="login">Submit</button>
                 </form>
                 <h2 class="abbreviated-name">F. Last</h2>
             </div>
@@ -35,33 +35,33 @@
             <div class="arrest-container">
                 <form id="new-arrest-form">
                     <h3>Add new arrest</h3>
-                    <label for="name">
-                            <input type="text" name="name" id="name" value="Name">
+                    <label for="date">Date
+                            <input type="date" name="date" id="date">
+                        </label>
+                    <label for="name">Name
+                            <input type="text" name="name" id="name">
                     </label>
-                    <label for="date">
-                        <input type="date" name="date" id="date" value="">
+                    <label for="year">Year
+                            <input type="text" minlength="4" maxlength="4" name="year" id="year">
                     </label>
-                    <label for="year">
-                            <input type="text" minlength="4" maxlength="4" name="year" id="year" value="Vehicle year">
+                    <label for="make">Make
+                            <input type="text" name="make" id="make">
                     </label>
-                    <label for="make">
-                            <input type="text" name="make" id="make" value="Vehicle make">
+                    <label for="model">Model
+                            <input type="text" name="model" id="model">
                     </label>
-                    <label for="model">
-                            <input type="text" name="model" id="model" value="Vehicle model">
-                    </label>
-                            <input type="submit" value="Submit arrest">
+                    <button type="button" id="submit-arrest">Submit</button>
                 </form>
                 <ul class="arrest-list">
-                    <li class="arrest">
+                    <!-- <li class="arrest">
                         <div class="arrest-info">
                             <div class="arrest-date"> Dec 25, 2018</div>
                             <div class="arrest-name"> John Zed </div>
                             <div class="arrest-car"> 2018 Chevrolet Camaro </div>
                         </div>
                         <a href="#" class="delete-arrest"><img src="img/x.png"></a>
-                    </li>
-                    <p style="text-align: center;">-end of results-</p>
+                    </li> -->
+                    <p class="no-results" style="text-align: center;">No results</p>
                 </ul>
             </div>
         </div>
