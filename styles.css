@@ -52,7 +52,10 @@
       border-spacing: 0;
   }
 
-
+/* VARIABLES */
+:root {
+    --shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+}
 
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
@@ -90,7 +93,6 @@ html {
     font-size: 20px;
     font-family: 'Abel', sans-serif;
     color: white;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
     background: linear-gradient(black, #0f567d) no-repeat;
     min-height: 100%;
 }
@@ -130,10 +132,10 @@ header .logo img {
     width: 50%;
     margin-top: 2em;
     padding: 2em;
-    background: rgba(255, 255, 255, 0.25);
+    background: gainsboro;
+    color: darkslategray;
     border-radius: .25em;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
-    border-bottom: 1px solid yellow;
+    box-shadow: var(--shadow);
 }
 
 /* ARREST COUNT CONTAINER */
@@ -142,6 +144,40 @@ header .logo img {
 }
 
 .arrest-count-container span {
+    font-size: 1.25em;
     font-weight: bold;
     color: red;
+}
+
+/* NEW ARREST CONTAINER */
+
+/* ARREST CONTAINER */
+.arrest {
+    display: grid;
+    grid: 1fr / 1fr 20px;
+    border-radius: .25em;
+    padding: .5em;
+    margin: .5em 0 .5em 0;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+    background: snow;
+    color: slategray;
+
+    transition: all 0.1s ease-in;
+}
+
+.arrest:hover {
+    transform: scale(1.01);
+    color: darkslategray;
+}
+
+.arrest-info {
+    display: grid;
+    grid: 1fr / 1fr 1fr 1fr;
+}
+
+.arrest-date {
+    font-weight: 100;
+}
+.arrest-name {
+    font-weight: bold;
 }
