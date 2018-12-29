@@ -1,23 +1,23 @@
-// let mainContainerHeight = getComputedStyle(document.querySelector('#main-container')).height;
-// let mainContainerBeforeHeight = getComputedStyle(document.querySelector('#main-container'), '::before');
+let mainContainer = document.querySelector('#main-container');
+mainContainer.addEventListener('click', myFunction);
+let arrestLog = [{
+    name: 'Joe',
+    date: 'Dec 27, 2018',
+    car: '2001 Ford Focus',
+}];
 
-// let styleSheet = document.styleSheets[0];
-// styleSheet.insertRule(`#main-container::before {
-//     height: ${mainContainerHeight} !important;
-// }`, 1);
-
-
-// let firstName = document.querySelector('input#first-name');
-
-// firstName.addEventListener('focus', function(e){
-//     firstName.value = '';
-//     console.log(e);
-// })
-
-// firstName.addEventListener('blur', function(e){
-//     if(firstName.value === ''){
-//         firstName.value = 'test';
-//     }
-    
-//     console.log(e);
-// })
+function myFunction(e){
+    console.log(e.target.id);
+    if (e.target.nodeName === 'INPUT'){
+        console.log('input found');
+        arrestLog.push(
+            {
+                name: 'Bill Nye',
+                date: 'Oct 28, 2018',
+                car: '2011 Ford Fiesta', 
+            }
+        );
+    } else if (e.target.className === 'delete-arrest') {
+        console.log('delete arrest');
+    }
+}

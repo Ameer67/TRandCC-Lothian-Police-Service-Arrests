@@ -215,3 +215,12 @@ header .logo img {
 .arrest-name {
     font-weight: bold;
 }
+
+.delete-arrest {
+    opacity: .5;
+    height: 20px;
+}
+
+.delete-arrest:hover {
+    opacity: .9;
+}
