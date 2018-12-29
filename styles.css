@@ -93,14 +93,28 @@ html {
     font-size: 20px;
     font-family: 'Abel', sans-serif;
     color: white;
-    background: linear-gradient(black, #0f567d) no-repeat;
-    min-height: 100%;
+    background-image: url('img/bg1.jpg');
+    background-size: cover;
+    background-position: 50% 0;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid: 1fr / 1fr;
 }
 
 /*----MAIN CONTAINER----*/
 #main-container {
+    width: 50%;
+    border-radius: .25em;
+    background: rgba(125, 125, 125, .5);
     display: grid;
+    align-self: center;
+    justify-self: center;
     justify-items: center;
+    box-shadow: var(--shadow);
 }
 
 /*----HEADER----*/
@@ -112,7 +126,6 @@ header {
     padding: 1.5em;
     width: 100%;
     border-radius: 0 0 .5em .5em;
-    background: url('img/bg1.jpg') 60% 20% / cover;
 } 
 
 header .logo {
@@ -129,12 +142,10 @@ header .logo img {
 
 /*----MAIN CONTENT----*/
 #main-content {
-    width: 50%;
-    margin-top: 2em;
     padding: 2em;
     background: gainsboro;
     color: darkslategray;
-    border-radius: .25em;
+    border-radius: 0 0 .25em .25em;
     box-shadow: var(--shadow);
 }
 
@@ -153,9 +164,8 @@ header .logo img {
 /* ARREST CONTAINER */
 .arrest-container {
     padding: .5em;
-    background: silver;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
 }
+
 .arrest {
     display: grid;
     grid: 1fr / 1fr 20px;
@@ -165,7 +175,6 @@ header .logo img {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
     background: snow;
     color: slategray;
-
     transition: all 0.1s ease-in;
 }
 
