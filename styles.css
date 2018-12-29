@@ -94,7 +94,6 @@ html {
     font-family: 'Abel', sans-serif;
     color: white;
     background-image: url('img/bg1.jpg');
-    background-position: 50% 0;
     height: 100%;
 }
 
@@ -124,7 +123,6 @@ body {
     height: 100%;
     background-image: url('img/bg1.jpg');
     background-attachment: fixed;
-    background-position: 50% 0;
     filter: blur(5px);
 }
 
@@ -149,8 +147,19 @@ header .logo img {
     max-width: 100%;
 }
 
+/* CURRENT USER */
+.current-user {
+    display: grid;
+    justify-items: center;
+}
 .welcome-back, .abbreviated-name {
     text-align: center;
+}
+
+.abbreviated-name {
+    display: inline-block;
+    padding: 0 5px 0 5px;
+    border: 2px solid white;
 }
 
 /*----MAIN CONTENT----*/
