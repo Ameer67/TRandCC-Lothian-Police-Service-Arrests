@@ -93,6 +93,7 @@ html {
     font-size: 20px;
     font-family: 'Abel', sans-serif;
     color: white;
+    background-attachment: fixed;
     background-image: url('img/bg1.jpg');
     height: 100%;
 }
@@ -109,6 +110,7 @@ body {
     width: 50%;
     border-radius: .25em;
     background: rgba(125, 125, 125, .5);
+    border: 1px solid rgba(255, 255, 255, .25);
     display: grid;
     align-self: center;
     justify-self: center;
@@ -175,7 +177,7 @@ header .logo img {
     text-align: center;
 }
 
-.arrest-count-container span {
+.arrest-count-container .arrest-count {
     font-size: 1.25em;
     font-weight: bold;
     color: red;

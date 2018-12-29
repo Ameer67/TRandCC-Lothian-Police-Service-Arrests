@@ -3,23 +3,22 @@ let arrestList = document.querySelector('.arrest-list');
 let arrestCount = document.querySelector('.arrest-count');
 let arrestLog = [];
 
-arrestContainer.addEventListener('click', arrestFunction);
+arrestContainer.addEventListener('click', arrestFormFunction);
 
-function arrestFunction(e){
-    if (e.target.id === 'submit-arrest'){
+function arrestFormFunction(e){
+    let arrestForm = e.target.form; // grab arrest form
+    if (e.target.id === 'submit-arrest'){ // if item clicked on has id of submit-arrest
 
-        let arrestForm = e.target.form;
-        let allInputsFilled = true;
+        let allInputsFilled = true; // default to all inputs already filled
         
         for (let i = 0; i < arrestForm.length - 1; i++){
             if (arrestForm[i].value === ''){ //check if any inputs are blank
-                allInputsFilled = false;
+                allInputsFilled = false; // if they are, change flag to false
             } 
         }
 
-        console.log(allInputsFilled);
-
         if (allInputsFilled === true) { // do the following if all inputs are filled
+
             let newRecord = document.createElement('li');
             newRecord.className = 'arrest';
             newRecord.innerHTML = `
@@ -30,6 +29,7 @@ function arrestFunction(e){
                 </div>
                 <a href="#" class="delete-arrest"><img src="img/x.png"></a>
             `;
+
             arrestLog.push(newRecord); // add the new element to the array
             document.querySelector('.no-results').style.display = 'none'; // hide 'no results'
             for (let i = 0; i < arrestForm.length - 1; i++){ // clear inputs
@@ -40,11 +40,26 @@ function arrestFunction(e){
                 arrestList.appendChild(arrestLog[i]);
             }
         }
-        
+    }
+
     ///////////////////////////////////////////////////////////////////////        
 
-    } else if (e.target.parentElement.className === 'delete-arrest') {
-        console.log('delete arrest');
+    else if (e.target.parentElement.className === 'delete-arrest') { // if X button was clicked
+        let currentArrestIndex = arrestLog.indexOf(e.target.parentElement.parentElement); // grab index of which arrest was clicked on
+        arrestLog.splice(currentArrestIndex, 1); // remove arrest from log
+        arrestList.removeChild(e.target.parentElement.parentElement); // remove arrest from page
+
+        if (arrestLog.length === 0) { //display no results if arrayLog is 0
+            document.querySelector('.no-results').style.display = 'block';
+        }
     }
-    arrestCount.innerText = arrestLog.length;
+
+    ///////////////////////////////////////////////////////////////////////
+
+    arrestCount.innerText = arrestLog.length; // update number of arrests
+    if (arrestLog.length === 1) {
+        arrestCount.nextElementSibling.innerText = 'arrest';
+    } else {
+        arrestCount.nextElementSibling.innerText = 'arrests';
+    }
 }
