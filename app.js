@@ -3,8 +3,8 @@ let arrestList = document.querySelector('.arrest-list');
 let arrestCount = document.querySelector('.arrest-count');
 let arrestLog = [];
 
+///////////////// ADD REMOVE ARRESTS ////////////////////////
 arrestContainer.addEventListener('click', arrestFormFunction);
-
 function arrestFormFunction(e){
     let arrestForm = e.target.form; // grab arrest form
     if (e.target.id === 'submit-arrest'){ // if item clicked on has id of submit-arrest
@@ -42,7 +42,7 @@ function arrestFormFunction(e){
         }
     }
 
-    ///////////////////////////////////////////////////////////////////////        
+    /////////////////////////////////////////////////      
 
     else if (e.target.parentElement.className === 'delete-arrest') { // if X button was clicked
         let currentArrestIndex = arrestLog.indexOf(e.target.parentElement.parentElement); // grab index of which arrest was clicked on
@@ -54,7 +54,7 @@ function arrestFormFunction(e){
         }
     }
 
-    ///////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////
 
     arrestCount.innerText = arrestLog.length; // update number of arrests
     if (arrestLog.length === 1) {
@@ -63,3 +63,18 @@ function arrestFormFunction(e){
         arrestCount.nextElementSibling.innerText = 'arrests';
     }
 }
+
+//////// CHANGE DATE INPUT TYPE BASED ON FOCUS ////////////
+arrestContainer.addEventListener('focusin', function(e){
+    if (e.target.id === 'date') {
+        console.log(e.target.type);
+        e.target.type = 'date';
+    }
+});
+
+arrestContainer.addEventListener('focusout', function(e){
+    if (e.target.id === 'date' && e.target.value === '') {
+        console.log(e.target.type);
+        e.target.type = 'text';
+    }
+});
