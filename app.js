@@ -35,7 +35,7 @@ function arrestFormFunction(e){
             for (let i = 0; i < arrestForm.length - 1; i++){ // clear inputs
                 arrestForm[i].value = '';
             }
-
+            arrestForm[0].type = 'text'; // change back date input type
             for (let i = 0; i < arrestLog.length; i++){ // add new element as child of arrestList
                 arrestList.appendChild(arrestLog[i]);
             }
@@ -67,14 +67,12 @@ function arrestFormFunction(e){
 //////// CHANGE DATE INPUT TYPE BASED ON FOCUS ////////////
 arrestContainer.addEventListener('focusin', function(e){
     if (e.target.id === 'date') {
-        console.log(e.target.type);
         e.target.type = 'date';
     }
 });
 
 arrestContainer.addEventListener('focusout', function(e){
     if (e.target.id === 'date' && e.target.value === '') {
-        console.log(e.target.type);
         e.target.type = 'text';
     }
 });

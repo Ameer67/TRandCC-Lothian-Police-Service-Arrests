@@ -90,7 +90,7 @@ a {
 }
 
 html {
-    font-size: 20px;
+    font-size: 22px;
     font-family: 'Abel', sans-serif;
     color: white;
     background-attachment: fixed;
@@ -108,6 +108,7 @@ body {
 #main-container {
     position: relative;
     width: 50%;
+    margin: 1em;
     border-radius: .25em;
     background: rgba(125, 125, 125, .5);
     display: grid;
@@ -128,25 +129,24 @@ body {
 }
 
 input {
+    height: 40px;
     font-size: 1em;
     font-family: 'Abel', sans-serif;
-    padding: .25em;
-    background:rgba(255, 255, 255, .5);
+    padding: .5em;
+    background:rgba(255, 255, 255, .75);
     border-radius: .125em;
     border: 0;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
-    /* border: 1px solid rgba(0, 0, 0, 0.25); */
-    /* border-bottom: 2px solid rgba(0, 0, 0, 0.25); */
 }
 
 input:hover {
-    background: rgba(255, 255, 255, .75);
+    background: rgba(255, 255, 255, .85);
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
 }
 
 input:focus {
     outline: none;
-    background: rgba(255, 255, 255, .85);
+    background: rgba(255, 255, 255, .95);
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
 }
 
@@ -155,7 +155,6 @@ button {
     cursor: pointer;
     font-size: 1em;
     font-family: 'Abel', sans-serif;
-    font-weight: bold;
     color: white;
     border-radius: .125em;
     background: rgba(0, 0, 0, 0.15);
@@ -171,6 +170,7 @@ button:active {
     color: gainsboro;
     background: rgba(0, 0, 0, 0.20);
     box-shadow: none;
+    transform: scale(.97);
 }
 
 /*----HEADER----*/
@@ -227,13 +227,28 @@ header .logo img {
     color: red;
 }
 
+/* ARREST CONTAINER */
+.arrest-container {
+    margin-top: 1em;
+}
+
+.arrest-container h3{
+    display: inline-block;
+    padding: .25em;
+    border-radius: .125em .125em 0 0;
+    background: rgba(0, 0, 0, 0.15);
+}
+
 /* ARREST FORM */
 #new-arrest-form {
     display: grid;
-    grid: repeat(3, 1fr)/repeat(9, 1fr);
+    grid: repeat(2, 1fr)/repeat(9, 1fr);
     grid-column-gap: .5em;
     grid-row-gap: .5em;
-    margin: .5em 0 1em 0;
+    margin-bottom: 1em;
+    padding: .5em;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0 .125em .125em .125em;
 }
 
 #date {
@@ -256,10 +271,7 @@ header .logo img {
     grid-column: 5 / 9;
 }
 
-/* ARREST CONTAINER */
-.arrest-container {
-    padding: .5em;
-}
+/* ARREST LIST */
 
 .arrest {
     display: grid;
@@ -298,4 +310,36 @@ header .logo img {
 
 .delete-arrest:hover {
     opacity: .9;
+}
+
+@media (max-width: 1600px) {
+    #main-container {
+        width: 55%;
+    }
+}
+
+@media (max-width: 1366px) {
+    html {
+        font-size: 20px;
+    }
+    #main-container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 18px;
+    }
+
+    #main-container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    #main-content {
+        border-radius: 0;
+    }
 }
