@@ -179,7 +179,8 @@ header {
     grid: 2fr 1fr/ 1fr;
     grid-column-gap: 1em;
     justify-items: center;
-    padding: 1.5em;
+    align-items: center;
+    padding: 1em 1em 0 1em;
     width: 100%;
     border-radius: 0 0 .5em .5em;
 } 
@@ -190,6 +191,13 @@ header .logo {
 
 header .logo img {
     max-width: 100%;
+}
+
+header h3 {
+    color: #ffee00;
+    letter-spacing: .5em;
+    margin-right: -.5em;
+
 }
 
 /* CURRENT USER */
@@ -234,7 +242,7 @@ header .logo img {
 
 .arrest-container h3{
     display: inline-block;
-    padding: .25em;
+    padding: .25em .5em;
     border-radius: .125em .125em 0 0;
     background: rgba(0, 0, 0, 0.15);
 }
@@ -249,6 +257,7 @@ header .logo img {
     padding: .5em;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0 .125em .125em .125em;
+    box-shadow: 0 2px 7px rgba(0,0,0,.15);
 }
 
 #date {
@@ -276,7 +285,7 @@ header .logo img {
 .arrest {
     display: grid;
     grid: 1fr / 1fr 20px;
-    border-radius: .25em;
+    border-radius: .125em;
     padding: .5em;
     margin: .5em 0 .5em 0;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
@@ -292,7 +301,7 @@ header .logo img {
 
 .arrest-info {
     display: grid;
-    grid: 1fr / 1fr 1fr 1fr;
+    grid: 1fr / 1fr 1fr 1.25fr;
 }
 
 .arrest-date {
