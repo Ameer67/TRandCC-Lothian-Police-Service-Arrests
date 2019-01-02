@@ -36,7 +36,8 @@ function arrestFormFunction(e){
             `;
             
             arrestLog.push(newRecord); // add the new element to the array
-            document.querySelector('.no-results').style.display = 'none'; // hide 'no results'
+            document.querySelector('.no-results').style.display = 'none';
+            document.querySelector('.categories').style.display = 'grid'; // hide 'no results'
             for (let i = 0; i < arrestForm.length - 1; i++){ // clear inputs
                 arrestForm[i].value = '';
             }
@@ -56,6 +57,7 @@ function arrestFormFunction(e){
 
         if (arrestLog.length === 0) { //display no results if arrayLog is 0
             document.querySelector('.no-results').style.display = 'block';
+            document.querySelector('.categories').style.display = 'none';
         }
     }
 

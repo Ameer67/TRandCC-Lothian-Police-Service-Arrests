@@ -281,6 +281,15 @@ header h3 {
 }
 
 /* ARREST LIST */
+.categories {
+    display: none;
+    grid: 1fr / 1fr 1fr 1.25fr 20px;
+    margin-bottom: -.25em;
+}
+
+.categories > * {
+    padding-left: .125em;
+}
 
 .arrest {
     display: grid;
