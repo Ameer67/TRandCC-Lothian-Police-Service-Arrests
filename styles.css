@@ -128,7 +128,7 @@ body {
     filter: blur(5px);
 }
 
-input {
+input, select {
     height: 40px;
     font-size: 1em;
     font-family: 'Abel', sans-serif;
@@ -240,11 +240,18 @@ header h3 {
     margin-top: 1em;
 }
 
-.arrest-container h3{
-    display: inline-block;
+/* NEW ARREST SECTION */
+.new-arrest {
+    margin-bottom: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: .125rem;
+    box-shadow: 0 2px 7px rgba(0,0,0,.15);
+    overflow: hidden;
+}
+
+.new-arrest h3{
     padding: .25em .5em;
-    border-radius: .125em .125em 0 0;
-    background: rgba(0, 0, 0, 0.15);
+    background: royalblue;
 }
 
 /* ARREST FORM */
@@ -253,11 +260,8 @@ header h3 {
     grid: repeat(2, 1fr)/repeat(9, 1fr);
     grid-column-gap: .5em;
     grid-row-gap: .5em;
-    margin-bottom: 1em;
     padding: .5em;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 0 .125em .125em .125em;
-    box-shadow: 0 2px 7px rgba(0,0,0,.15);
+    
 }
 
 #date {
@@ -278,6 +282,20 @@ header h3 {
 
 #model {
     grid-column: 5 / 9;
+}
+
+
+/* FILTER FORM */
+#filter-form {
+    display: grid;
+    grid: 1fr / 1fr 4fr;
+    grid-column-gap: .5em;
+    grid-row-gap: .5em;
+    margin-bottom: 1em;
+    padding: .5em;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: .125rem;
+    box-shadow: 0 2px 7px rgba(0,0,0,.15);
 }
 
 /* ARREST LIST */

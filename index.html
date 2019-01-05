@@ -21,21 +21,34 @@
                 <h1><span class="arrest-count">0</span> <span>arrests</span> made to date</h1>
             </div>
             <div class="arrest-container">
-                <h3>Add new arrest</h3>
-                <form id="new-arrest-form">
-                    <input type="text" name="date" id="date" placeholder="arrest date" value="">
-                    <input type="text" name="name" id="name" placeholder="racer name">
-                    <input type="text" maxlength="4" name="year" id="year" placeholder="vehicle year">
-                    <input type="text" name="make" id="make" placeholder="vehicle make">
-                    <input type="text" name="model" id="model" placeholder="vehicle model">
-                    <button type="button" id="submit-arrest">SUBMIT</button>
-                </form>
+                <div class="new-arrest">
+                    <h3>Add new arrest</h3>
+                    <form id="new-arrest-form">
+                        <input type="text" name="date" id="date" placeholder="arrest date" value="">
+                        <input type="text" name="name" id="name" placeholder="racer name">
+                        <input type="text" maxlength="4" name="year" id="year" placeholder="vehicle year">
+                        <input type="text" name="make" id="make" placeholder="vehicle make">
+                        <input type="text" name="model" id="model" placeholder="vehicle model">
+                        <button type="button" id="submit-arrest">SUBMIT</button>
+                    </form>  
+                </div>
+                <div class="filter-arrests">
+                    <h3>Filter Results</h3>
+                    <form id="filter-form">
+                        <select name="" id="">
+                            <option value="date">date</option>
+                            <option value="date">name</option>
+                            <option value="date">vehicle</option>
+                        </select>
+                        <input type="search" name="" id="" placeholder="filter arrests">
+                    </form>
+                </div>
+                <div class="categories">
+                    <h5>Date</h5>
+                    <h5>Name</h5>
+                    <h5>Vehicle</h5>
+                </div>
                 <ul class="arrest-list">
-                    <div class="categories">
-                        <h5>Date</h5>
-                        <h5>Name</h5>
-                        <h5>Vehicle</h5>
-                    </div>
                     <!-- <li class="arrest">
                         <div class="arrest-info">
                             <div class="arrest-date"> Dec 25, 2018</div>
