@@ -9,31 +9,30 @@
 </head>
 <body>
     <div id="main-container">
-        <div class="blur"></div>
         <header>
             <div class="logo">
                 <img src="img/LothianPoliceSmall.png" alt="Lothian Police Service logo">
             </div>
             <h3>Arrest Database</h3>
         </header>
-        <div id="main-content">
-            <div class="arrest-count-container">
-                <h1><span class="arrest-count">0</span> <span>arrests</span> made to date</h1>
-            </div>
-            <div class="arrest-container">
-                <div class="new-arrest">
-                    <h3>Add new arrest</h3>
-                    <form id="new-arrest-form">
-                        <input type="text" name="date" id="date" placeholder="arrest date" value="">
-                        <input type="text" name="name" id="name" placeholder="racer name">
-                        <input type="text" maxlength="4" name="year" id="year" placeholder="vehicle year">
-                        <input type="text" name="make" id="make" placeholder="vehicle make">
-                        <input type="text" name="model" id="model" placeholder="vehicle model">
-                        <button type="button" id="submit-arrest">SUBMIT</button>
-                    </form>  
-                </div>
-                <div class="filter-arrests">
-                    <h3>Filter Results</h3>
+        <div class="arrest-count-container">
+            <h1><span class="arrest-count">0</span> <span>arrests</span> made to date</h1>
+        </div>
+        <div class="arrest-container">
+            <section class="new-arrest">
+                <h3>Add new arrest</h3>
+                <form id="new-arrest-form">
+                    <input type="text" name="date" id="date" placeholder="arrest date" value="">
+                    <input type="text" name="name" id="name" placeholder="racer name">
+                    <input type="text" maxlength="4" name="year" id="year" placeholder="vehicle year">
+                    <input type="text" name="make" id="make" placeholder="vehicle make">
+                    <input type="text" name="model" id="model" placeholder="vehicle model">
+                    <button type="button" id="submit-arrest">SUBMIT</button>
+                </form>  
+            </section>
+            <section class="arrest-results">
+                <h3>Results</h3>
+                <div class="arrest-results-content">
                     <form id="filter-form">
                         <select name="" id="">
                             <option value="date">date</option>
@@ -42,24 +41,25 @@
                         </select>
                         <input type="search" name="" id="" placeholder="filter arrests">
                     </form>
+                    <div class="categories">
+                        <h5>Date</h5>
+                        <h5>Name</h5>
+                        <h5>Vehicle</h5>
+                    </div>
+                    <ul class="arrest-list">
+                        <!-- <li class="arrest">
+                            <div class="arrest-info">
+                                <div class="arrest-date"> Dec 25, 2018</div>
+                                <div class="arrest-name"> John Zed </div>
+                                <div class="arrest-car"> 2018 Chevrolet Camaro </div>
+                            </div>
+                            <a href="#" class="delete-arrest"><img src="img/x.png"></a>
+                        </li> -->
+                        <p class="no-results" style="text-align: center;">[no results found]</p>
+                    </ul>
                 </div>
-                <div class="categories">
-                    <h5>Date</h5>
-                    <h5>Name</h5>
-                    <h5>Vehicle</h5>
-                </div>
-                <ul class="arrest-list">
-                    <!-- <li class="arrest">
-                        <div class="arrest-info">
-                            <div class="arrest-date"> Dec 25, 2018</div>
-                            <div class="arrest-name"> John Zed </div>
-                            <div class="arrest-car"> 2018 Chevrolet Camaro </div>
-                        </div>
-                        <a href="#" class="delete-arrest"><img src="img/x.png"></a>
-                    </li> -->
-                    <p class="no-results" style="text-align: center;">[no results found]</p>
-                </ul>
-            </div>
+                
+            </section>
         </div>
     </div>
     <script src="app.js"></script>
