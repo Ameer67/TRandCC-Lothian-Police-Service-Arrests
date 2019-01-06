@@ -8,7 +8,7 @@ arrestContainer.addEventListener('click', arrestFormFunction);
 function arrestFormFunction(e){
     let arrestForm = e.target.form; // grab arrest form
     if (e.target.id === 'submit-arrest'){ // if item clicked on has id of submit-arrest
-
+        e.preventDefault();
         let allInputsFilled = true; // default to all inputs already filled
         
         for (let i = 0; i < arrestForm.length - 1; i++){
