@@ -280,9 +280,6 @@ header h3 {
 /* FILTER FORM */
 #filter-form {
     display: grid;
-    grid: 1fr / 1fr 4fr;
-    grid-column-gap: .5em;
-    grid-row-gap: .5em;
     margin-bottom: 1em;
     border-radius: .125rem;
 }
